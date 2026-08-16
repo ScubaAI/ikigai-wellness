@@ -14,8 +14,6 @@
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <meta name="googlebot" content="index, follow">
 <link rel="canonical" href="https://ikigaiwellness.mx/">
-<meta name="google-site-verification" content="⚠️_PON_AQUI_TU_TOKEN_DE_SEARCH_CONSOLE">
-
 <!-- Geo-targeting local (Google Maps / Local SEO) -->
 <meta name="geo.region" content="MX-YUC">
 <meta name="geo.placename" content="Homún, Yucatán, México">
@@ -58,27 +56,34 @@
 
 <!-- ========== META PIXEL (Facebook + Instagram Ads) ========== -->
 <script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', 'TU_PIXEL_ID');
-fbq('track', 'PageView');
+  const FB_PIXEL_ID = '';
+  if (FB_PIXEL_ID) {
+    !function(f,b,e,v,n,t,s){
+      if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s);
+    }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', FB_PIXEL_ID);
+    fbq('track', 'PageView');
+  }
 </script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=TU_PIXEL_ID&ev=PageView&noscript=1"/></noscript>
+<noscript>
+  <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=&ev=PageView&noscript=1" />
+</noscript>
 
 <!-- ========== GOOGLE ANALYTICS 4 ========== -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
 <script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-XXXXXXX', { anonymize_ip: true });
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+  const GA_MEASUREMENT_ID = '';
+  if (GA_MEASUREMENT_ID) {
+    const gtagScript = document.createElement('script');
+    gtagScript.async = true;
+    gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_MEASUREMENT_ID;
+    document.head.appendChild(gtagScript);
+    gtag('js', new Date());
+    gtag('config', GA_MEASUREMENT_ID, { anonymize_ip: true });
+  }
 </script>
 
 <!-- ========== TIKTOK PIXEL (opcional — se promociona en TikTok) ========== -->
@@ -158,7 +163,6 @@ ttq.page();
   ]
 }
 </script>
-</head>
 
 <script src="https://cdn.tailwindcss.com"></script>
 <script>

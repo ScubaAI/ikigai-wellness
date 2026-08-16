@@ -1,0 +1,52 @@
+# OS / editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+venv/
+.venv/
+.env
+.env.*
+
+# Node / package manager
+node_modules/
+.npm/
+.pnpm-store/
+.next/
+out/
+dist/
+coverage/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Local generated artifacts to ignore
+# (keep intentional project assets tracked explicitly)
+public/images/
+images/
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
+*.svg
+
+# Keep the generated project assets tracked
+!images/
+!images/huitzilin/
+!images/huitzilin/*.png
+!images/products/
+!images/products/*.png
+
+# Keep source scripts tracked
+!scripts/
+!scripts/*.py
